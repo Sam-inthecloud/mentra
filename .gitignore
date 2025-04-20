@@ -1,0 +1,8 @@
+.env
+*.pem
+*.log
+__pycache__/
+*.pyc
+.env.*
+mentra-env/
+

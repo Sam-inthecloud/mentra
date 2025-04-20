@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mentra Quiz</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>🧪 Mentra SysOps Quiz </h1>
+
+  <form method="POST" action="#">
+    <p><strong>{{ question }}</strong></p>
+    <ul>
+      {% for choice in choices %}
+        <li>{{ loop.index }}. {{ choice }}</li>
+      {% endfor %}
+    </ul>
+    <p><em>Answer: Option {{ correct_index + 1 }}</em></p>
+    <p>📘 Explanation: {{ explanation }}</p>
+  </form>
+
+  <br>
+  <a href="/quiz">🔁 Generate Another</a> |
+  <a href="/">🏠 Back to Dashboard</a>
+</body>
+</html>
+
