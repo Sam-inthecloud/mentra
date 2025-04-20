@@ -1,7 +1,11 @@
 import boto3
 import json
+import os
+from dotenv import load_dotenv
 
-model_id = "arn:aws:bedrock:us-east-1:713881818082:inference-profile/us.anthropic.claude-3-7-sonnet-20250219-v1:0"
+
+load_dotenv()
+model_id = os.getenv(CLAUDE_MODEL_ID")
 region = "us-east-1"
 
 client = boto3.client("bedrock-runtime", region_name=region)
